@@ -1,11 +1,13 @@
-DROP TABLE IF EXISTS pets;
-DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS treatments;
+DROP TABLE IF EXISTS pets;
+
+DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS owners;
 
 CREATE TABLE owners (
     id SERIAL PRIMARY KEY,
-    owner_name VARCHAR (100),
+    first_name VARCHAR (100),
+    last_name VARCHAR (100),
     email VARCHAR (200),
     mobile VARCHAR (150)
 );
@@ -18,7 +20,7 @@ CREATE TABLE vets (
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     pet_name VARCHAR (100),
-    DOB VARCHAR (20),
+    dob VARCHAR (20),
     pet_type VARCHAR (100),
     owner_id SERIAL REFERENCES owners (id),
     vet_id SERIAL REFERENCES vets (id)

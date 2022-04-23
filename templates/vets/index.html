@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2> Vets </h2>
 
+{% for vet in vets %}
+
+    <section>
+        <p> {{ vet.vet_name }} </p>
+
+    </section>
+    
+{% endfor %}
 
 {% endblock %}
