@@ -3,15 +3,18 @@
 
 <h3> Vets </h3>
 
+<div id="grid-container-vets">
+
 {% for vet in vets %}
 
-    <section>
+    <section id="vet">
         <p> {{ vet.vet_name }} </p>
-        <a href="/vets/{{ vet.id }}"> View Vet Details </a>
-
-    
+        <a href="/vets/pets"> View all {{ vet.vet_name }}'s pets </a> <br>
+        <a href="/treatments"> View all {{ vet.vet_name }}'s treatment notes </a>
     </section>
     
 {% endfor %}
+
+</div>
 
 {% endblock %}

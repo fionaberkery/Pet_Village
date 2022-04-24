@@ -46,6 +46,9 @@ def delete(id):
 
 
 def update(vet):
-    sql = "UPDATE vets SET name = %s WHERE id = %s"
+    sql = "UPDATE vets SET vet_name = %s WHERE id = %s"
     values = [vet.vet_name, vet.id]
     run_sql(sql, values)
+
+def find_pets():
+    sql = "SELECT * FROM vets "

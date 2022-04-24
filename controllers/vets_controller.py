@@ -18,8 +18,15 @@ def vets():
 @vets_blueprint.route("/vets/<id>")
 def vet(id):
     vet = vet_repository.select(id)
-    return render_template("vets/profile.html", vet=vet)
+    pets = pet_repository.select_all()
+    return render_template("vets/profile.html", vet=vet, pets=pets)
 
+
+@vets_blueprint.route("/vets")
+def find_all_pets():
+    pets = []
+    vet_repository.find_pets()
+    return render_template("/vets/pets", )
 #NEW
 
 

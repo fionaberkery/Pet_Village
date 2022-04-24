@@ -4,22 +4,20 @@
 <h3> Owners </h3>
 
 <form method="get" action="/owners/new">
-    <button type="submit"> Register A New Owner </button>
+    <button id="add-button" type="submit"> Register A New Owner </button>
 </form>
 
-
+<div id="grid-container-owners">
 
 {% for owner in owners %}
 
-    <section>
+    <section id="owner">
         <p> {{ owner.first_name }} {{ owner.last_name}} </b> </p>
-
         <a href="/owners/{{ owner.id }}"> View Full Details </a>
- 
-        
-
     </section>
     
 {% endfor %}
+
+</div>
 
 {% endblock %}

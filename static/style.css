@@ -45,7 +45,7 @@ h3 {
     width: 70%;
 }
 
-button {
+#add-button {
     
     background-color: #DD9BCF; 
     border: none;
@@ -63,13 +63,13 @@ button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-button {
+#add-button {
     background-color: white;
     color:black;
     border:2px solid #DD9BCF;
 }
 
-button:hover {
+#add-button:hover {
     background-color: #DD9BCF;
     color:white;
 }
@@ -103,4 +103,92 @@ a {
     /* padding: 20px; */
     margin-left: 20px;
 
+}
+
+#owner {
+    color: black;
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline-style: solid;
+    outline-color: black;
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#grid-container-owners {
+    display: grid;
+    grid-template-areas: 
+    'section section section';
+}
+
+#grid-container-vets {
+    display: grid;
+    grid-template-areas: 
+    'section section';
+}
+
+#vet {
+    color: black;
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline-style: solid;
+    outline-color: black;
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#del-buttons {
+    background-color: #DD9BCF; 
+    border: none;
+    margin: 10px;
+    margin-left: 20px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
+    width:20%;
+}
+    
+#del-buttons {
+    background-color: white;
+    color:black;
+    border:2px solid #DD9BCF;
+
+}
+    
+#del-buttons:hover {
+    background-color: #DD9BCF;
+    color:white;
+}
+
+
+#edit-links:link, #edit-links:visited {
+    background-color: #fad2cc;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    width:15%;
+    margin-left: 20px;
+}
+
+
+#edit-links:hover, #edit-links:active {
+    background-color: #DD9BCF;
+}
+
+#details {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left:20px;
+    padding: 10px;
 }
