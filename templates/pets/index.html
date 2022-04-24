@@ -1,6 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section class="pets" id="grid-container">
+    
+    
+    <h3> Registered Pets </h3>
 
+    
+
+    <div>
+        <form method="get" action="/pets/new">
+            <button type="submit"> Register A New Pet </button>
+        </form>
+    </div> 
+    
+    <p id="pets-para"> To 'edit' or 'delete' a pet follow link to full profile </p>
+
+</section>
+
+<div id="grid-container2">
+    {% for pet in pets %}
+
+        <section id="pet">
+            <p> <b> {{ pet.pet_name }} </b> <br> 
+                {{ pet.pet_type}} </p>
+            <a href="/pets/{{ pet.id }}"> View {{ pet.pet_name}}'s profile </a>
+        
+            
+
+        </section>
+
+
+        
+    {% endfor %}
+
+</div>
 
 {% endblock %}

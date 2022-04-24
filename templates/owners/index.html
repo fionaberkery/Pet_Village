@@ -1,6 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3> Owners </h3>
 
+<form method="get" action="/owners/new">
+    <button type="submit"> Register A New Owner </button>
+</form>
+
+
+
+{% for owner in owners %}
+
+    <section>
+        <p> {{ owner.first_name }} {{ owner.last_name}} </b> </p>
+
+        <a href="/owners/{{ owner.id }}"> View Full Details </a>
+ 
+        
+
+    </section>
+    
+{% endfor %}
 
 {% endblock %}

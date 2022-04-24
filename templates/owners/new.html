@@ -2,5 +2,26 @@
 {% block content %}
 
 
+<h2> Add a New Owner </h2>
+
+<form action="/owners" method="POST">
+    <div>
+        <label for="first_name"> Fist Name: </label>
+        <input type="text" id="first_name" name="first_name"> <br>
+
+        <label for="last_name"> Last Name : </label>
+        <input type="text" id="lasst_name" name="last_name"> <br>
+
+        <label for="email"> Contact Email: </label>
+        <input type="text" id="email" name="email"> <br>
+
+        <label for="mobile"> Contact Number : </label>
+        <input type="text" id="mobile" name="mobile"> <br>
+
+        <input type="submit">
+
+    </div>
+</form>
+
 
 {% endblock %}

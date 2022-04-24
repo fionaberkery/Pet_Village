@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Pet Profile </h3>
+
+    
+
+    <p> Name : {{ pet.pet_name }} <br>
+        Type : {{ pet.pet_type }} <br>
+        D.O.B : {{ pet.dob }} <br>
+        Owner : {{ pet.owner.id }} 
+        <a href="/owners/{{ pet.owner.id }}"> View Full Details </a> <br>
+        Vet : {{ pet.vet.id }}
+        <a href="/vets/{{ pet.vet.id }}"> View Full Details </a>
+
+        <form action="/pets/{{ pet.id }}/delete" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+
+        <a href="/pets/{{ pet.id }}/edit"> Edit </a>
+
+    </p>
+
+
+    
+
+
+{% endblock %}

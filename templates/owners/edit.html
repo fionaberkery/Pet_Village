@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2> Edit Owner Details Here </h2>
 
+<form action="/owners/{{ owner.id }}" method="POST">
+
+    <label for="first_name"> First Name : </label>
+        <input type="text" id="first_name" name="first_name" value="{{ owner.first_name }}" required autofocus> <br>
+
+        <label for="last_name"> Last Name : </label>
+        <input type="text" id="last_name" name="last_name" value="{{ owner.last_name }}" required autofocus> <br>
+
+        <label for="email"> Contact Email : </label>
+        <input type="text" id="email" name="email" value="{{ owner.email }}" required autofocus> <br>
+
+        <label for="mobile"> Contact Number : </label>
+        <input type="text" id="mobile" name="mobile" value="{{ owner.mobile }}" required autofocus> <br>
+
+
+    <div>
+        <input type="submit">
+    </div>
+
+</form>
 
 {% endblock %}

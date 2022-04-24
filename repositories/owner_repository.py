@@ -28,7 +28,7 @@ def select(id):
     sql = "SELECT * FROM owners WHERE id=%s"
     values = [id]
     result = run_sql(sql, values)[0]
-    owner = Owner(result['first_name'], result['last_name'], result['email'], result['mobile'], result['id'])
+    owner = Owner(result["first_name"], result["last_name"], result["email"], result["mobile"], result["id"])
     return owner
 
 

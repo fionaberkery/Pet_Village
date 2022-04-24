@@ -10,10 +10,15 @@ import repositories.treatment_repository as treatment_repository
 vets_blueprint = Blueprint("vets",__name__)
 
 #INDEX
-@vets_blueprint.route('/vets')
+@vets_blueprint.route("/vets")
 def vets():
     vets = vet_repository.select_all()
-    return render_template('vets/index.html', vets=vets)
+    return render_template("vets/index.html", vets=vets)
+
+@vets_blueprint.route("/vets/<id>")
+def vet(id):
+    vet = vet_repository.select(id)
+    return render_template("vets/profile.html", vet=vet)
 
 #NEW
 

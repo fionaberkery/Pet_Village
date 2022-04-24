@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2> Vets </h2>
+<h3> Vets </h3>
 
 {% for vet in vets %}
 
     <section>
         <p> {{ vet.vet_name }} </p>
+        <a href="/vets/{{ vet.id }}"> View Vet Details </a>
 
+    
     </section>
     
 {% endfor %}
