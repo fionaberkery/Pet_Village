@@ -61,7 +61,7 @@ def update_pet(id):
     vet_id = request.form["vet_id"]
     owner = owner_repository.select(owner_id)
     vet = vet_repository.select(vet_id)
-    new_pet = Pet(pet_name, dob, pet_type, owner, vet)
+    new_pet = Pet(pet_name, dob, pet_type, owner, vet, id)
     pet_repository.update(new_pet)
     return redirect("/pets")
 
@@ -74,4 +74,9 @@ def delete_pet(id):
     return redirect("/pets")
 
 
-
+# get list of all treatment notes of one pet
+@pets_blueprint.route("/pets/<id>/treatments")
+def get_treatments(id):
+    pet = pet_repository.select(id)
+    treatments = treatment_repository.find_by_pet(pet)
+    return render_template("/pets/treatments.html", treatments=treatments, pet=pet)

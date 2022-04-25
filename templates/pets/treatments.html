@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+{% for treatment in treatments %}
+
+<h3> {{ treatment.pet.pet_name }}'s Treatment Notes </h3>
+
+        <section>
+            <p> <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
+                <b> Procedure </b> : {{ treatment.procedure_type}} <br>
+                
+                <b> Vet </b> : {{ treatment.vet.vet_name }} 
+            
+            </p>
+            
+        
+            
+
+        </section>
+
+       
+
+        
+    {% endfor %} <section>
+        <a href="/pets/{{ pet.id }}/edit" id="edit-links"> Edit </a>
+
+        <form action="/pets/{{ pet.id }}/delete" method="POST">
+            <input type="submit" value="Delete" id="del-buttons">
+        </form>
+        </section>
+
+
+{% endblock %}

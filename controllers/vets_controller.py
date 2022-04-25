@@ -9,12 +9,13 @@ import repositories.treatment_repository as treatment_repository
 
 vets_blueprint = Blueprint("vets",__name__)
 
-#INDEX
+# home page for vets
 @vets_blueprint.route("/vets")
 def vets():
     vets = vet_repository.select_all()
     return render_template("vets/index.html", vets=vets)
 
+# # profile page for one vet
 @vets_blueprint.route("/vets/<id>")
 def vet(id):
     vet = vet_repository.select(id)
@@ -22,21 +23,18 @@ def vet(id):
     return render_template("vets/profile.html", vet=vet, pets=pets)
 
 
-@vets_blueprint.route("/vets")
-def find_all_pets():
-    pets = []
-    vet_repository.find_pets()
-    return render_template("/vets/pets", )
-#NEW
 
+# get a list of all pets belonging to one vet 
+@vets_blueprint.route("/vets/<id>/pets")
+def get_pets(id):
+    vet = vet_repository.select(id)
+    pets = pet_repository.find_by_vet(vet)
+    return render_template("/vets/pets.html", pets=pets, vet=vet)
 
-#CREATE
+# get a list of all treatment notes to one vet
+@vets_blueprint.route("/vets/<id>/treatments")
+def get_treatments(id):
+    vet = vet_repository.select(id)
+    treatments = treatment_repository.find_by_vet(vet)
+    return render_template("/vets/treatments.html", treatments=treatments, vet=vet)
 
-
-#EDIT
-
-
-#UPDATE
-
-
-#DELETE

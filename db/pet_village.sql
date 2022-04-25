@@ -20,16 +20,16 @@ CREATE TABLE vets (
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     pet_name VARCHAR (100),
-    dob VARCHAR (20),
+    dob VARCHAR (100),
     pet_type VARCHAR (100),
-    owner_id SERIAL REFERENCES owners (id),
-    vet_id SERIAL REFERENCES vets (id)
+    owner_id INT REFERENCES owners (id) ON DELETE CASCADE,
+    vet_id INT REFERENCES vets (id)
 );
 
 CREATE TABLE treatments (
     id SERIAL PRIMARY KEY,
-    treatment_date VARCHAR (20),
+    treatment_date VARCHAR (100),
     procedure_type VARCHAR (200),
-    pet_id SERIAL REFERENCES pets (id),
-    vet_id SERIAL REFERENCES vets (id)
+    pet_id INT REFERENCES pets (id) ON DELETE CASCADE,
+    vet_id INT REFERENCES vets (id)
 );

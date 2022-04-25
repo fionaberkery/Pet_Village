@@ -51,7 +51,7 @@ def update_owner(id):
     last_name = request.form["last_name"]
     email = request.form["email"]
     mobile = request.form["mobile"]
-    new_owner = Owner(first_name, last_name, email, mobile)
+    new_owner = Owner(first_name, last_name, email, mobile, id)
     owner_repository.update(new_owner)
     return redirect("/owners")
 

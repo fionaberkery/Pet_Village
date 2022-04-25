@@ -1,6 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 id="add-heading"> Edit Treatment Note Here </h3>
 
+<form action="/treatments/{{treatment.id}}" method="POST" id="add-box">
+
+    <div id="add-content-box">
+
+        <label for="pet_name"> Pet </label>
+        <select name="pet_id" id="pet_id" required>
+            {% for pet in pets %}
+            <option value="{{ pet.id }}">
+                {{ pet.pet_name }}
+            </option>
+            {% endfor %}
+        </select> <br>
+
+
+        <label for="vet_name"> Vet </label>
+        <select name="vet_id" id="vet_id" required>
+            {% for vet in vets %}
+            <option value="{{ vet.id }}">
+                {{ vet.vet_name }}
+            </option>
+            {% endfor %}
+        </select> <br>
+    
+        
+
+
+        <label for="treatment_date"> Treatment Date </label>
+        <input type="text" id="treatment_date" name="treatment_date" value="{{ treatment.treatment_date }}" required> <br>
+
+        <label for="procedure_type"> Procedure </label>
+        <input type="text" id="procedure_type" name="procedure_type" value="{{ treatment.procedure_type }}" required> <br>
+
+
+
+        <input id="add-button" type="submit">
+
+    
+     
+
+
+    </div>    
+</form>
 
 {% endblock %}

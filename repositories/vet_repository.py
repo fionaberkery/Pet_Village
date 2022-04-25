@@ -50,5 +50,6 @@ def update(vet):
     values = [vet.vet_name, vet.id]
     run_sql(sql, values)
 
-def find_pets():
-    sql = "SELECT * FROM vets "
+
+# find all pets belonging to a vet
+

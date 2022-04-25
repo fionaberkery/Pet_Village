@@ -1,6 +1,82 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section>
+    
+    
+    <h3> All Treatment Notes </h3>
 
+    
+
+    <div>
+        <form method="get" action="/treatments/new">
+            <button type="submit" id="add-button"> Create A New Treatment Note </button>
+        </form>
+    </div> 
+
+
+<div>
+
+    {% for treatment in treatments %}
+
+    <section>
+        <p>
+            <b> Pet </b> : {{ treatment.pet.pet_name}} <br>
+            <b> Vet </b> : {{ treatment.vet.vet_name }} <br>
+            <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
+            <b> Procedure </b> : {{ treatment.procedure_type}} <br>
+        
+        </p>
+        
+        <section>
+            <a href="/treatments/{{ treatment.id }}/edit" id="edit-links"> Edit </a>
+    
+            <form action="/treatments/{{ treatment.id }}/delete" method="POST">
+                <input type="submit" value="Delete" id="del-buttons">
+            </form>
+            </section>
+        
+
+    </section>
+
+
+    
+{% endfor %}
+
+</div>
+
+
+
+
+
+    
+    </div>
+    
+
+        <p id="p1"> 
+            <h4> See Notes By Vet </h4>
+                {% for vet in vets %}
+                    <section>
+                        <a href="/vets/{{ vet.id }}/treatments"> View all {{ vet.vet_name }}'s treatment notes </a>
+                    </section>
+                {% endfor %}
+        </p>
+
+        <p id="p1">
+            <h4> See Notes By Pet </h4>
+            {% for pet in pets %}
+                    <section>
+                        <a href="/pets/{{ pet.id }}/treatments"> {{ pet.pet_name}}'s Treatment Notes </a>
+                    </section>
+                {% endfor %}
+        </p>
+        </p>
+ 
+    
+    
+            
+        
+
+</section>
 
 {% endblock %}

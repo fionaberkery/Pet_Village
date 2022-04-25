@@ -18,7 +18,6 @@ def save(pet):
 
 def select_all():
     pets = []
-
     sql = "SELECT * FROM pets"
     results = run_sql(sql)
     for result in results:
@@ -32,7 +31,6 @@ def select(id):
     sql = "SELECT * FROM pets WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-
     owner = owner_repository.select(result ['owner_id']) 
     vet = vet_repository.select(result['vet_id'])
     pet = Pet(result['pet_name'], result['dob'], result['pet_type'], owner, vet, result['id'])
@@ -54,3 +52,15 @@ def update(pet):
     values = [pet.pet_name, pet.dob, pet.pet_type, pet.owner.id, pet.vet.id, pet.id]
     run_sql(sql, values)
 
+
+
+def find_by_vet(vet):
+    pets = []
+    sql = "SELECT * FROM pets WHERE vet_id=%s "
+    values = [vet.id]
+    results = run_sql(sql, values)
+    for result in results:
+        owner = owner_repository.select(result ['owner_id']) 
+        pet = Pet(result['pet_name'], result['dob'], result['pet_type'], owner, vet, result['id'])
+        pets.append(pet)
+    return pets 

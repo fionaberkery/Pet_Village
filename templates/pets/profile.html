@@ -8,11 +8,13 @@
     <p id="details"> Name : {{ pet.pet_name }} <br>
         Type : {{ pet.pet_type }} <br>
         D.O.B : {{ pet.dob }} <br>
-        Owner : {{ pet.owner.id }} 
+        Owner : {{ pet.owner.first_name }} {{ pet.owner.last_name }} 
+            <a href="/owners/{{ pet.owner.id }}"> View {{ pet.owner.first_name }}'s Full Details </a> <br>
+        Vet : {{ pet.vet.vet_name }} <br>
 
-            <a href="/owners/{{ pet.owner.id }}"> View Full Details </a> <br>
-            Vet : {{ pet.vet.id }}
-            <a href="/vets/{{ pet.vet.id }}"> View Full Details </a> <br>
+        Treatment Notes :
+        <a href="/pets/{{ pet.id }}/treatments"> {{ pet.pet_name}}'s Treatment Notes </a>
+
 
         <section>
         <a href="/pets/{{ pet.id }}/edit" id="edit-links"> Edit </a>

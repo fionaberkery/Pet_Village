@@ -30,11 +30,16 @@ def select(id):
     sql = "SELECT * FROM treatments WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-
     pet = pet_repository.select(result ['pet_id']) 
     vet = vet_repository.select(result['vet_id'])
     treatment = Treatment(result['treatment_date'], result['procedure_type'], pet, vet, result['id'])
     return treatment
+
+def update(treatment):
+    sql = "UPDATE treatments SET (treatment_date, procedure_type, pet_id, vet_id) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [treatment.treatment_date, treatment.procedure_type, treatment.pet.id, treatment.vet.id, treatment.id]
+    run_sql(sql, values)
+
 
 def delete_all():
     sql = "DELETE FROM treamtents"
@@ -47,7 +52,25 @@ def delete(id):
     run_sql(sql, values)
 
 
-# def update(pet):
-#     sql = "UPDATE pets SET (pet_name, dob, pet_type, owner_id, vet_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
-#     values = [pet.pet_name, pet.dob, pet.pet_type, pet.owner.id, pet.vet.id, pet.id]
-#     run_sql(sql, values)
+def find_by_vet(vet):
+    treatments = []
+    sql = "SELECT * FROM treatments WHERE vet_id=%s "
+    values = [vet.id]
+    results = run_sql(sql, values)
+    for result in results:
+        pet = pet_repository.select(result ['pet_id']) 
+        treatment = Treatment(result['treatment_date'], result['procedure_type'], pet, vet, result['id'])
+        treatments.append(treatment)
+    return treatments 
+
+
+def find_by_pet(pet):
+    treatments = []
+    sql = "SELECT * FROM treatments WHERE pet_id=%s "
+    values = [pet.id]
+    results = run_sql(sql, values)
+    for result in results:
+        vet = vet_repository.select(result ['vet_id']) 
+        treatment = Treatment(result['treatment_date'], result['procedure_type'], pet, vet, result['id'])
+        treatments.append(treatment)
+    return treatments 

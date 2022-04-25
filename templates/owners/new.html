@@ -2,23 +2,23 @@
 {% block content %}
 
 
-<h2> Add a New Owner </h2>
+<h3 id="add-heading"> Add a New Owner </h3>
 
-<form action="/owners" method="POST">
-    <div>
-        <label for="first_name"> Fist Name: </label>
-        <input type="text" id="first_name" name="first_name"> <br>
+<form action="/owners" method="POST" id="add-box">
+    <div id="add-content-box">
+        <label for="first_name"> Fist Name </label>
+        <input type="text" id="first_name" name="first_name" placeholder="First name.."> <br>
 
-        <label for="last_name"> Last Name : </label>
-        <input type="text" id="lasst_name" name="last_name"> <br>
+        <label for="last_name"> Last Name </label>
+        <input type="text" id="last_name" name="last_name" placeholder="Last name.."> <br>
 
-        <label for="email"> Contact Email: </label>
-        <input type="text" id="email" name="email"> <br>
+        <label for="email"> Contact Email</label>
+        <input type="text" id="email" name="email" placeholder="Email address.."> <br>
 
-        <label for="mobile"> Contact Number : </label>
-        <input type="text" id="mobile" name="mobile"> <br>
+        <label for="mobile"> Contact Number </label>
+        <input type="text" id="mobile" name="mobile" placeholder="Phone number.."> <br>
 
-        <input type="submit">
+        <input type="submit" id="add-button">
 
     </div>
 </form>

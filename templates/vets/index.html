@@ -9,8 +9,8 @@
 
     <section id="vet">
         <p> {{ vet.vet_name }} </p>
-        <a href="/vets/pets"> View all {{ vet.vet_name }}'s pets </a> <br>
-        <a href="/treatments"> View all {{ vet.vet_name }}'s treatment notes </a>
+        <a href="/vets/{{ vet.id }}/pets"> View all {{ vet.vet_name }}'s pets </a> <br>
+        <a href="/vets/{{ vet.id }}/treatments"> View all {{ vet.vet_name }}'s treatment notes </a>
     </section>
     
 {% endfor %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for pet in pets %}
+
+        <section>
+            <p> <b> Pet Name </b> : {{ pet.pet_name }} <br> 
+                <b> Date of Birth </b> : {{ pet.dob}} <br>
+                <b> Type of Pet </b> : {{ pet.pet_type}} <br>
+                <b> Owner </b> : {{ pet.owner.first_name }} {{ pet.owner.last_name }}
+            
+            </p>
+            
+        
+            
+
+        </section>
+
+
+        {% endfor %}
+
+{% endblock %}
