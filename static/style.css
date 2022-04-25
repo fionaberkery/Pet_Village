@@ -231,6 +231,10 @@ input[type=text], select {
     justify-content: flex-end;
 }
 
+#extra-list {
+    list-style: none;
+}
+
 h4 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width:40%;
@@ -240,4 +244,89 @@ h4 {
 
 #p1 {
     width:20%;
+}
+
+
+#parallax {
+    background-image: url(pup.jpg);
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#grid-container4 {
+    display: grid;
+    grid-template-areas: 
+    'section section section';
+}
+
+#home-page {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#treatment-buttons {
+    display: grid;
+    grid-template-areas: 
+    'a form';
+}
+
+#treat-edit-buttons {
+    
+    background-color: #DD9BCF; 
+    border: none;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+#treat-edit-buttons {
+    background-color: #fad2cc;
+    color:black;
+    border:2px solid #fad2cc ;
+}
+
+#treat-edit-buttons:hover {
+    background-color: #DD9BCF;
+    border: #DD9BCF;
+    color:white;
+}
+
+#treat-del-buttons {
+    background-color: #DD9BCF; 
+    border: none;
+    margin: 10px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
+    
+}
+    
+#treat-del-buttons {
+    background-color: white;
+    color:black;
+    border:2px solid #d70404 ;
+
+}
+    
+#treat-del-buttons:hover {
+    background-color: #d70404;
+    color:white;
+}
+
+#report-link {
+    font-size: smaller;
 }
