@@ -3,9 +3,20 @@
 
 <h3> Vet Details </h3>
 
-    <p> Vet : {{ vet.vet_name }} <br>
-        <a href="/pets"> View all Pets </a>
+    <p> <b> Vet </b> : {{ vet.vet_name }} <br>
+        <b> Animal Speciality </b> : {{ vet.speciality }} <br>
+        <b> Contact Email </b> : {{ vet.email }} <br>
+        
     </p>
 
+    <section id="grid-container-buttons">  
+            
+        <a href="/vets/{{ vet.id }}/edit" id="edit-links"> Edit Profile </a>
+
+    <form action="/vets/{{ vet.id }}/vet" method="POST">
+        <input type="submit" value="Delete Vet Profile" id="del-buttons">
+    </form>
+
+    </section>
 
 {% endblock %}

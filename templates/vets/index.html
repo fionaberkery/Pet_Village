@@ -3,14 +3,19 @@
 
 <h3> Vets </h3>
 
+<form method="get" action="/vets/new">
+    <button id="add-button" type="submit"> Register A New Vet </button>
+</form>
+
 <div id="grid-container-vets">
 
 {% for vet in vets %}
 
     <section id="vet">
-        <p> {{ vet.vet_name }} </p>
-        <a href="/vets/{{ vet.id }}/pets"> View all {{ vet.vet_name }}'s pets </a> <br>
-        <a href="/vets/{{ vet.id }}/treatments"> View all {{ vet.vet_name }}'s treatment notes </a>
+        <p> {{ vet.vet_name }} <br>
+        <a href="vets/{{ vet.id }}"> view full profile </a> </p> <br>
+        <a href="/vets/{{ vet.id }}/pets"> view all {{ vet.vet_name }}'s pets </a> <br>
+        <a href="/vets/{{ vet.id }}/treatments"> view all {{ vet.vet_name }}'s treatment notes </a>
     </section>
     
 {% endfor %}

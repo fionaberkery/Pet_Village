@@ -1,6 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 id="add-heading"> Edit Vet Profile Here </h3>
+
+<form action="/vets/{{ vet.id }}" method="POST" id="add-box">
+<div id="add-content-box">
+    <label for="vet_name"> Name : </label>
+        <input type="text" id="vet_name" name="vet_name" value="{{ vet.vet_name }}" required autofocus> <br>
+
+        <label for="speciality"> Speciality : </label>
+        <input type="text" id="speciality" name="speciality" value="{{ vet.speciality }}" required autofocus> <br>
+
+        <label for="email"> Contact Email : </label>
+        <input type="text" id="email" name="email" value="{{ vet.email }}" required autofocus> <br>
+
+
+
+    <div>
+        <input type="submit" id="add-button">
+    </div>
+</div>
+</form>
+
 
 
 {% endblock %}

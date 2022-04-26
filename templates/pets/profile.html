@@ -9,11 +9,11 @@
         Type : {{ pet.pet_type }} <br>
         D.O.B : {{ pet.dob }} <br>
         Owner : {{ pet.owner.first_name }} {{ pet.owner.last_name }} 
-            <a href="/owners/{{ pet.owner.id }}"> View {{ pet.owner.first_name }}'s Full Details </a> <br>
+            <a href="/owners/{{ pet.owner.id }}"> view {{ pet.owner.first_name }}'s full details </a> <br>
         Vet : {{ pet.vet.vet_name }} <br>
 
         Treatment Notes :
-        <a href="/pets/{{ pet.id }}/treatments"> {{ pet.pet_name}}'s Treatment Notes </a>
+        <a href="/pets/{{ pet.id }}/treatments"> view all {{ pet.pet_name}}'s notes </a>
 
 
         <section>

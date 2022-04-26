@@ -10,23 +10,27 @@ import repositories.treatment_repository as treatment_repository
 from models.vet import Vet
 import repositories.vet_repository as vet_repository
 
+from models.nurse import Nurse
+import repositories.nurse_repository as nurse_repository
+
 # treatment_repository.delete_all()
 # pet_repository.delete_all()
 # owner_repository.delete_all()
 # vet_repository.delete_all()
+# nurse_repository.delete_all()
 
 
-vet_1 = Vet("Dr DoAlot")
+vet_1 = Vet("Dr DoAlot", "Reptiles", "doalotnotalitte@mail.com")
 vet_repository.save(vet_1)
-vet_2 = Vet("Dr Pawsitive")
+vet_2 = Vet("Dr Pawsitive", "Dogs", "bingo@mail.com")
 vet_repository.save(vet_2)
-vet_3 = Vet("Dr Meowgaret")
+vet_3 = Vet("Dr Meowgaret", "Cats", "purr@mail.com")
 vet_repository.save(vet_3)
-vet_4 = Vet("Dr Trotter")
+vet_4 = Vet("Dr Trotter", "Farm animals", "oink@mail.com")
 vet_repository.save(vet_4)
-vet_5 = Vet("Dr Bunderful")
+vet_5 = Vet("Dr Bunderful", "Small pets", "bunnyfoufou@mail.com")
 vet_repository.save(vet_5)
-vet_6 = Vet("Dr Dory")
+vet_6 = Vet("Dr Dory", "Aquatic", "bubbles@mail.com")
 vet_repository.save(vet_6)
 
 # vet_repository.save(vet_6)
@@ -56,6 +60,23 @@ owner_repository.save(owner_8)
 # owner_repository.select(16)
 # owner_repository.delete_all()
 # owner_repository.delete(20)
+
+nurse_1 = Nurse("a name1", "Mondays/Wednesdays", True, "name1@mail.com")
+nurse_repository.save(nurse_1)
+nurse_2 = Nurse("a name2", "Mondays/Tuesdays/Fridays", False, "name2@mail.com")
+nurse_repository.save(nurse_2)
+nurse_3 = Nurse("a name3", "Tuesdays only", False, "name3@mail.com")
+nurse_repository.save(nurse_3)
+nurse_4 = Nurse("a name4", "Mondays/Thursdays", True, "name4@mail.com")
+nurse_repository.save(nurse_4)
+nurse_5 = Nurse("a name5", "Mon-Fri", False, "name5@mail.com")
+nurse_repository.save(nurse_5)
+
+# nurse_repository.select_all()
+# nurse_repository.select(16)
+# nurse_repository.delete_all()
+# nurse_repository.delete(20)
+
 
 pet_1 = Pet("Snuffles", "1st May 2021", "Hamster", owner_1, vet_1)
 pet_repository.save(pet_1)

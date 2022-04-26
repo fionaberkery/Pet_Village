@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS treatments;
 DROP TABLE IF EXISTS pets;
-
+DROP TABLE IF EXISTS nurses;
 DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS owners;
 
@@ -14,7 +14,17 @@ CREATE TABLE owners (
 
 CREATE TABLE vets (
     id SERIAL PRIMARY KEY,
-    vet_name VARCHAR (100)
+    vet_name VARCHAR (100),
+    speciality VARCHAR (150),
+    email VARCHAR (150)
+);
+
+CREATE TABLE nurses (
+    id SERIAL PRIMARY KEY,
+    nurse_name VARCHAR (200),
+    days_works VARCHAR (255),
+    available_weekends BOOLEAN,
+    email VARCHAR (250)
 );
 
 CREATE TABLE pets (

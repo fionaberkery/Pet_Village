@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 id="add-heading"> Add a New Vet To Practice </h3>
 
+<form action="/vets" method="POST" id="add-box">
+    <div id="add-content-box">
+        <label for="vet_name"> Vet Name </label>
+        <input type="text" id="vet_name" name="vet_name" placeholder="Vet name.."> <br>
+
+        <label for="Speciality"> Animal Speciality  </label>
+        <input type="text" id="speciality" name="speciality" placeholder="Speciality.."> <br>
+
+        <label for="email"> Contact Email</label>
+        <input type="text" id="email" name="email" placeholder="Email address.."> <br>
+
+
+        <input type="submit" id="add-button">
+
+    </div>
+</form>
 
 {% endblock %}
