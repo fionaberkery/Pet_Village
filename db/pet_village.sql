@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS nurses;
 DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS owners;
+DROP TABLE IF EXISTS prices;
 
 CREATE TABLE owners (
     id SERIAL PRIMARY KEY,
@@ -25,6 +26,15 @@ CREATE TABLE nurses (
     days_works VARCHAR (255),
     available_weekends BOOLEAN,
     email VARCHAR (250)
+);
+
+CREATE TABLE prices (
+    id SERIAL PRIMARY KEY,
+    treatment_type VARCHAR (255),
+    price VARCHAR (200),
+    time_req VARCHAR (255),
+    vet_req BOOLEAN,
+    nurses_req INT
 );
 
 CREATE TABLE pets (

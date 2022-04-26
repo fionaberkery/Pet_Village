@@ -13,6 +13,9 @@ import repositories.vet_repository as vet_repository
 from models.nurse import Nurse
 import repositories.nurse_repository as nurse_repository
 
+from models.price import Price
+import repositories.price_repository as price_repository
+
 # treatment_repository.delete_all()
 # pet_repository.delete_all()
 # owner_repository.delete_all()
@@ -76,6 +79,16 @@ nurse_repository.save(nurse_5)
 # nurse_repository.select(16)
 # nurse_repository.delete_all()
 # nurse_repository.delete(20)
+
+price_1 = Price("X-ray", "£70", "30 minutes", False, 2)
+price_repository.save(price_1)
+price_2 = Price("Ultra Sound Scan", "£120", "45 minutes", False, 1)
+price_repository.save(price_2)
+price_3 = Price("CT Scan", "£150", "60 minutes", True, 3)
+price_repository.save(price_3)
+price_4 = Price("MRI Scan", "£180", "60 minutes", True, 3)
+price_repository.save(price_4)
+
 
 
 pet_1 = Pet("Snuffles", "1st May 2021", "Hamster", owner_1, vet_1)

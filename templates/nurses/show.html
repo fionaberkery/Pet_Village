@@ -3,10 +3,24 @@
 
 <h3> Nurse Details </h3>
 
-    <p id="details"> Name : {{ nurse.nurse_name }} <br>
+    <p id="details"> <b> Name </b> : {{ nurse.nurse_name }} <br>
         Days of Work : {{ nurse.days_works }} <br>
-        Available to work weekends : {{ nurse.available_weekends }} <br>
-        Email : {{ nurse.email }} <br>
+        
+        
+        <b> Available to work weekends </b> : 
+        {% if nurse.available_weekends == True %}
+        
+        <span> 	&#9989; </span>
+
+        {% else %}
+
+        <span>&#10060;</span>
+        
+        {% endif %}
+        <br>
+        
+        
+        <b> Email </b> : {{ nurse.email }} <br>
 
         <section id="grid-container-buttons">  
             

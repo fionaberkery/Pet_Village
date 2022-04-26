@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Treatment & Prices </h3>
+
+<div id="grid-container-owners">
+
+{% for price in prices %}
+    
+    <section id="owner">
+        <h4> {{ price.treatment_type }} </h4>
+        <p> 
+            <b> Price </b> : {{ price.price }} </b> <br>
+            <b> Time Required </b> : {{ price.time_req }} </b> <br>
+            <b> Vet Required </b> : 
+            
+                {% if price.vet_req == True %}
+        
+                    <span> 	&#9989; </span>
+
+                {% else %}
+
+                    <span>&#10060;</span>
+        
+                {% endif %}
+            <br>
+
+            <b> Number of Nurse Required </b> : {{ price.nurses_req }} </b> 
+        
+        </p>
+    </section>
+    
+{% endfor %}
+
+</div>
+
+{% endblock %}
