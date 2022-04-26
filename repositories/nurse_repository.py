@@ -22,26 +22,26 @@ def select_all():
         nurses.append(nurse)
     return nurses
 
-# def select(id):
-#     sql = "SELECT * FROM owners WHERE id=%s"
-#     values = [id]
-#     result = run_sql(sql, values)[0]
-#     owner = Owner(result["first_name"], result["last_name"], result["email"], result["mobile"], result["id"])
-#     return owner
+def select(id):
+    sql = "SELECT * FROM nurses WHERE id=%s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    nurse = Nurse(result["nurse_name"], result["days_works"], result["available_weekends"], result["email"], result["id"])
+    return nurse
 
 
-# def delete_all():
-#     sql = "DELETE FROM owners"
-#     run_sql(sql)
+def delete_all():
+    sql = "DELETE FROM nurses"
+    run_sql(sql)
 
 
-# def delete(id):
-#     sql = "DELETE FROM owners WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def delete(id):
+    sql = "DELETE FROM nurses WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 
-# def update(owner):
-#     sql = "UPDATE owners SET (first_name, last_name, email, mobile) = (%s, %s, %s, %s) WHERE id = %s"
-#     values = [owner.first_name, owner.last_name, owner.email, owner.mobile, owner.id]
-#     run_sql(sql, values)
+def update(nurse):
+    sql = "UPDATE nurses SET (nurse_name, days_works, available_weekends, email) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [nurse.nurse_name, nurse.days_works, nurse.available_weekends, nurse.email, nurse.id]
+    run_sql(sql, values)

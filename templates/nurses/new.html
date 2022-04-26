@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h3 id="add-heading"> Add a New Nurse to the Clinic </h3>
+
+<form action="/nurses" method="POST" id="add-box">
+    <div id="add-content-box">
+        <label for="nurse_name"> Nurse Name </label>
+        <input type="text" id="nurse_name" name="nurse_name" placeholder="Name.."> <br>
+
+        <label for="days_works"> Days of work </label>
+        <input type="text" id="days_works" name="days_works" placeholder="Days.."> <br>
+
+        <label for="available_weekends"> Available to work weekends ? </label>
+        <input type="text" id="available_weekends" name="available_weekends" placeholder="Availability.."> <br>
+
+        <label for="email"> Email </label>
+        <input type="text" id="email" name="email" placeholder="Work email.."> <br>
+
+        <input type="submit" id="add-button">
+
+    </div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Nurse Details </h3>
+
+    <p id="details"> Name : {{ nurse.nurse_name }} <br>
+        Days of Work : {{ nurse.days_works }} <br>
+        Available to work weekends : {{ nurse.available_weekends }} <br>
+        Email : {{ nurse.email }} <br>
+
+        <section id="grid-container-buttons">  
+            
+            <a href="/nurses/{{ nurse.id }}/edit" id="edit-links"> Edit </a>
+
+            <form action="/nurses/{{ nurse.id }}/delete" method="POST">
+                <input type="submit" value="Delete" id="del-buttons">
+            </form>
+
+
+
+
+        
+        
+        </section>    
+
+    </p>
+    
+
+
+
+{% endblock %}

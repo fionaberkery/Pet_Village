@@ -16,48 +16,48 @@ def nurses():
     nurses = nurse_repository.select_all()
     return render_template("/nurses/index.html", nurses=nurses)
 
-#SHOW
-# @owners_blueprint.route("/owners/<id>")
-# def select_owner(id):
-#     owner = owner_repository.select(id)
-#     return render_template("/owners/show.html", owner=owner)
+# SHOW
+@nurses_blueprint.route("/nurses/<id>")
+def select_nurse(id):
+    nurse = nurse_repository.select(id)
+    return render_template("/nurses/show.html", nurse=nurse)
 
 
-# #NEW
-# @owners_blueprint.route("/owners/new")
-# def new_owner():
-#     return render_template("/owners/new.html")
+#NEW
+@nurses_blueprint.route("/nurses/new")
+def new_nurse():
+    return render_template("/nurses/new.html")
 
-# #CREATE
-# @owners_blueprint.route("/owners", methods=["POST"])
-# def create_owner():
-#     first_name = request.form["first_name"]
-#     last_name = request.form["last_name"]
-#     email = request.form["email"]
-#     mobile = request.form["mobile"]
-#     new_owner = Owner(first_name, last_name, email, mobile)
-#     owner_repository.save(new_owner)
-#     return redirect("/owners")
+#CREATE
+@nurses_blueprint.route("/nurses", methods=["POST"])
+def create_nurse():
+    nurse_name = request.form["nurse_name"]
+    days_works = request.form["days_works"]
+    available_weekends = request.form["available_weekends"]
+    email = request.form["email"]
+    new_nurse = Nurse(nurse_name, days_works, available_weekends, email)
+    nurse_repository.save(new_nurse)
+    return redirect("/nurses")
 
-#     # EDIT
-# @owners_blueprint.route("/owners/<id>/edit")
-# def edit_owner(id):
-#     owner = owner_repository.select(id)
-#     return render_template("/owners/edit.html", owner=owner)
+# EDIT
+@nurses_blueprint.route("/nurses/<id>/edit")
+def edit_nurse(id):
+    nurse = nurse_repository.select(id)
+    return render_template("/nurses/edit.html", nurse=nurse)
 
-# # UPDATE
-# @owners_blueprint.route("/owners/<id>", methods=["POST"])
-# def update_owner(id):
-#     first_name = request.form["first_name"]
-#     last_name = request.form["last_name"]
-#     email = request.form["email"]
-#     mobile = request.form["mobile"]
-#     new_owner = Owner(first_name, last_name, email, mobile, id)
-#     owner_repository.update(new_owner)
-#     return redirect("/owners")
+# UPDATE
+@nurses_blueprint.route("/nurses/<id>", methods=["POST"])
+def update_nurse(id):
+    nurse_name = request.form["nurse_name"]
+    days_works = request.form["days_works"]
+    available_weekends = request.form["available_weekends"]
+    email = request.form["email"]
+    new_nurse = Nurse(nurse_name, days_works, available_weekends, email, id)
+    nurse_repository.update(new_nurse)
+    return redirect("/nurses")
 
-# #DELETE
-# @owners_blueprint.route("/owners/<id>/delete", methods=["POST"])
-# def delete_owner(id):
-#     owner_repository.delete(id)
-#     return redirect("/owners")
+#DELETE
+@nurses_blueprint.route("/nurses/<id>/delete", methods=["POST"])
+def delete_nurse(id):
+    nurse_repository.delete(id)
+    return redirect("/nurses")

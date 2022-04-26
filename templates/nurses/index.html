@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Nurses </h3>
+
+<form method="get" action="/nurses/new">
+    <button id="add-button" type="submit"> Register A New Nurse To The Clinic </button>
+</form>
+
+<div id="grid-container-owners">
+
+{% for nurse in nurses %}
+
+    <section id="owner">
+        <p> {{ nurse.nurse_name }} </b> </p>
+        <a href="/nurses/{{ nurse.id }}"> view {{ nurse.nurse_name }}'s full details </a>
+    </section>
+    
+{% endfor %}
+
+</div>
+
+{% endblock %}
