@@ -92,6 +92,14 @@ price_3 = Price("CT Scan", "£150", "60 minutes", True, 3)
 price_repository.save(price_3)
 price_4 = Price("MRI Scan", "£180", "60 minutes", True, 3)
 price_repository.save(price_4)
+price_5 = Price("Vet Appointment", "£110", "60 minutes", True, 1)
+price_repository.save(price_5)
+price_6 = Price("Specialist Vet Appointment", "£150", "90 minutes", True, 1)
+price_repository.save(price_6)
+price_7 = Price("Nurse Practioner Appointment", "£70", "45 minutes", False, 1)
+price_repository.save(price_7)
+price_8 = Price("Vet House Call", "£130", "90 minutes", True, 0)
+price_repository.save(price_8)
 
 
 

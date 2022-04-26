@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='scans.css') }}">
-    <title> Pet Village </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <title> Pet Village Veterinary Clinic </title>
 </head>
 <body>
     <header>
@@ -14,7 +16,7 @@
         <nav>
             
             <ul class="main-nav">
-                <li> <a href="#" class="logo"> Pet Village </a> </li>
+                <li> <a href="#" class="logo"> Pet Village Veterinary Clinic </a> </li>
                 <li> <a href="/"> Home </a> </li>
                 <li> <a href="/vets"> Vets </a> </li>
                 <li> <a href="/nurses"> Nurses </a> </li>
@@ -35,6 +37,22 @@
     
         {% block content %}
         {% endblock %}
+
+    <footer>
+        <p> Pet Village Veterinary Clinic </p>
+        <i class="fa fa-facebook-square" style="font-size:36px"></i>
+        <i class="fa fa-instagram" style="font-size:36px"></i>
+        <i class="fa fa-twitter-square" style="font-size:36px"></i>
+
+        <p> 
+        123 Pet Lovers Lane <br>
+        Edinburgh <br>
+        United Kingdom <br>
+        </p>
+
+        <a href="https://www.google.com/"> SSPCA </a>
+
+    </footer>
     
 </body>
 </html>

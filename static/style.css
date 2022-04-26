@@ -249,7 +249,7 @@ h4 {
 
 #parallax {
     background-image: url(pup.jpg);
-    min-height: 500px; 
+    min-height: 800px; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -362,4 +362,42 @@ h4 {
     border-radius: 10px;
     margin-left: 20px;
     background-color: #e3fce9;
+}
+
+#bookings-page {
+    background-image: url(clinic.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pets-page {
+    background-image: url(guinea-pigs.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nurses-page {
+    background-image: url(hamster.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home-page2 {
+    background-image: url(hamster.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #DD9BCF;
+    padding: 1%;
 }
