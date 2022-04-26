@@ -13,9 +13,19 @@
 
     <section id="vet">
         <p> {{ vet.vet_name }} <br>
-        <a href="vets/{{ vet.id }}"> view full profile </a> </p> <br>
-        <a href="/vets/{{ vet.id }}/pets"> view all {{ vet.vet_name }}'s pets </a> <br>
-        <a href="/vets/{{ vet.id }}/treatments"> view all {{ vet.vet_name }}'s treatment notes </a>
+        <a href="vets/{{ vet.id }}"> view full profile </a> </p> 
+        <a href="/vets/{{ vet.id }}/pets"> view all {{ vet.vet_name }}'s pets </a> <br> <br>
+        
+        <form method="get" action="/vets/{{ vet.id }}/treatments">
+        <button type="submit" id="treat-edit-buttons" > {{ vet.vet_name}}'s Treatment Notes </button>
+        </form>
+
+        <form method="get" action="/vets/{{ vet.id }}/bookings">
+        <button type="submit" id="treat-edit-buttons"> {{ vet.vet_name}}'s Appointments </button>
+        </form>
+
+       
+
     </section>
     
 {% endfor %}

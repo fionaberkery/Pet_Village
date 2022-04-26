@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="pets" id="grid-container">
+    
+    
+    <h3> Bookings </h3>
+
+    
+
+    <div>
+        <form method="get" action="/bookings/new">
+            <button type="submit" id="add-button"> Add A New Booking </button>
+        </form>
+    </div> 
+    
+
+
+</section>
+
+<div id="grid-container2">
+    {% for booking in bookings %}
+
+        <section id="pet">
+            <p> <b> Date </b> : {{ booking.date }} <br> 
+                <b> Time </b> : {{ booking.time }}  <br> 
+                <b> Pet </b>: {{ booking.pet.pet_name }} <br> 
+                <b> Treatment </b> : {{ booking.price.treatment_type }} <br> 
+                <b> Vet </b> : {{ booking.vet.vet_name }} <br>
+            </p>
+
+            <a href="/bookings/{{ booking.id }}/edit"> Edit </a>
+          
+            <form action="/bookings/{{ booking.id }}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+        
+            
+
+        </section>
+
+
+        
+    {% endfor %}
+
+</div>
+
+{% endblock %}

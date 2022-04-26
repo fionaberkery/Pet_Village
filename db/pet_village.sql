@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS bookings;
 DROP TABLE IF EXISTS treatments;
 DROP TABLE IF EXISTS pets;
 DROP TABLE IF EXISTS nurses;
@@ -40,16 +41,27 @@ CREATE TABLE prices (
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     pet_name VARCHAR (100),
-    dob VARCHAR (100),
+    dob DATE,
     pet_type VARCHAR (100),
     owner_id INT REFERENCES owners (id) ON DELETE CASCADE,
     vet_id INT REFERENCES vets (id)
 );
+
+
 
 CREATE TABLE treatments (
     id SERIAL PRIMARY KEY,
     treatment_date VARCHAR (100),
     procedure_type VARCHAR (200),
     pet_id INT REFERENCES pets (id) ON DELETE CASCADE,
+    vet_id INT REFERENCES vets (id)
+);
+
+CREATE TABLE bookings (
+    id SERIAL PRIMARY KEY,
+    date DATE,
+    time VARCHAR (200),
+    pet_id INT REFERENCES pets (id),
+    price_id INT REFERENCES prices (id),
     vet_id INT REFERENCES vets (id)
 );

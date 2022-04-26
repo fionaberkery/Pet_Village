@@ -30,18 +30,21 @@ def select(id):
     return price
 
 
-# def delete_all():
-#     sql = "DELETE FROM nurses"
-#     run_sql(sql)
 
 
-# def delete(id):
-#     sql = "DELETE FROM nurses WHERE id = %s"
-#     values = [id]
-#     run_sql(sql, values)
+def update(price):
+    sql = "UPDATE prices SET (treatment_type, price, time_req, vet_req, nurses_req) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [price.treatment_type, price.price, price.time_req, price.vet_req, price.nurses_req, price.id]
+    run_sql(sql, values)
 
 
-# def update(nurse):
-#     sql = "UPDATE nurses SET (nurse_name, days_works, available_weekends, email) = (%s, %s, %s, %s) WHERE id = %s"
-#     values = [nurse.nurse_name, nurse.days_works, nurse.available_weekends, nurse.email, nurse.id]
-#     run_sql(sql, values)
+
+def delete_all():
+    sql = "DELETE FROM prices"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE FROM prices WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

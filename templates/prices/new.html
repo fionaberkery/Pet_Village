@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h3 id="add-heading"> Add a New Treatment to the Clinic </h3>
+
+<form action="/prices" method="POST" id="add-box">
+    <div id="add-content-box">
+        <label for="treatment_type"> Treatment Type </label>
+        <input type="text" id="treatment_type" name="treatment_type" placeholder="Treatment.."> <br>
+
+        <label for="price"> Price </label>
+        <input type="text" id="price" name="price" placeholder="Price.."> <br>
+
+        <label for="time_req"> Time Required for Treatment </label>
+        <input type="text" id="time_req" name="time_req" placeholder="Time required.."> <br>
+
+        <label for="vet_req"> Vet Required for Treatment </label>
+        <input type="text" id="vet_req" name="vet_req" placeholder="Vet Required?.."> <br>
+
+        <label for="nurses_req"> Nurses Required for Treatment </label>
+        <input type="text" id="nurses_req" name="nurses_req" placeholder="Number needed.."> <br>
+
+        <input type="submit" id="add-button">
+
+    </div>
+</form>
+
+
+{% endblock %}

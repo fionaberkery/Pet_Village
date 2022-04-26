@@ -331,3 +331,35 @@ h4 {
     font-size: smaller;
 }
 
+#scan-page {
+    background-image: url(scans.jpg);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#prices-header {
+    margin: 10px;
+    border-radius: 20px;
+    background: #c6fad2;
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+#price-info-box {
+    color: black;
+    padding: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    outline-style: solid;
+    outline-color: black;
+    margin: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: #e3fce9;
+}

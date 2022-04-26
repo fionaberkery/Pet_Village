@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3> Booked Appointments </h3>
+
+{% for booking in bookings %}
+
+
+
+        <section>
+            <p> <b> Date </b> : {{ booking.date }} <br> 
+                <b> Time </b> : {{ booking.time }} <br>
+                <b> Treatment </b> : {{ booking.price.treatment_type }} <br>
+                <b> Pet </b> : {{ booking.pet.pet_name }} <br>
+                
+            </p>
+        </section>
+    {% endfor %} 
+
+
+{% endblock %}

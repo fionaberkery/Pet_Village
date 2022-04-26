@@ -7,6 +7,7 @@ import repositories.pet_repository as pet_repository
 import repositories.owner_repository as owner_repository
 import repositories.vet_repository as vet_repository
 import repositories.treatment_repository as treatment_repository
+import repositories.booking_repository as booking_repository
 
 pets_blueprint = Blueprint("pets",__name__)
 
@@ -80,3 +81,10 @@ def get_treatments(id):
     pet = pet_repository.select(id)
     treatments = treatment_repository.find_by_pet(pet)
     return render_template("/pets/treatments.html", treatments=treatments, pet=pet)
+
+# get list of all bookings of one pet 
+@pets_blueprint.route("/pets/<id>/bookings")
+def get_bookings(id):
+    pet = pet_repository.select(id)
+    bookings = booking_repository.find_by_pet(pet)
+    return render_template("/pets/bookings.html", bookings=bookings, pet=pet)

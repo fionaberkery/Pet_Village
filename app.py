@@ -6,6 +6,8 @@ from controllers.treatments_controller import treatments_blueprint
 from controllers.vets_controller import vets_blueprint
 from controllers.nurse_controller import nurses_blueprint
 from controllers.price_controller import prices_blueprint
+from controllers.booking_controller import bookings_blueprint
+
 
 app = Flask(__name__)
 
@@ -15,6 +17,7 @@ app.register_blueprint(treatments_blueprint)
 app.register_blueprint(vets_blueprint)
 app.register_blueprint(nurses_blueprint)
 app.register_blueprint(prices_blueprint)
+app.register_blueprint(bookings_blueprint)
 
 @app.route("/")
 def main():

@@ -20,41 +20,43 @@ def select_price(id):
     return render_template("/prices/show.html", price=price)
 
 
-# #NEW
-# @nurses_blueprint.route("/nurses/new")
-# def new_nurse():
-#     return render_template("/nurses/new.html")
+#NEW
+@prices_blueprint.route("/prices/new")
+def new_price():
+    return render_template("/prices/new.html")
 
-# #CREATE
-# @nurses_blueprint.route("/nurses", methods=["POST"])
-# def create_nurse():
-#     nurse_name = request.form["nurse_name"]
-#     days_works = request.form["days_works"]
-#     available_weekends = request.form["available_weekends"]
-#     email = request.form["email"]
-#     new_nurse = Nurse(nurse_name, days_works, available_weekends, email)
-#     nurse_repository.save(new_nurse)
-#     return redirect("/nurses")
+#CREATE
+@prices_blueprint.route("/prices", methods=["POST"])
+def create_price():
+    treatment_type = request.form["treatment_type"]
+    price = request.form["price"]
+    time_req = request.form["time_req"]
+    vet_req = request.form["vet_req"]
+    nurses_req = request.form["nurses_req"]
+    new_price = Price(treatment_type, price, time_req, vet_req, nurses_req)
+    price_repository.save(new_price)
+    return redirect("/prices")
 
-# # EDIT
-# @nurses_blueprint.route("/nurses/<id>/edit")
-# def edit_nurse(id):
-#     nurse = nurse_repository.select(id)
-#     return render_template("/nurses/edit.html", nurse=nurse)
+# EDIT
+@prices_blueprint.route("/prices/<id>/edit")
+def edit_price(id):
+    price = price_repository.select(id)
+    return render_template("/prices/edit.html", price=price)
 
-# # UPDATE
-# @nurses_blueprint.route("/nurses/<id>", methods=["POST"])
-# def update_nurse(id):
-#     nurse_name = request.form["nurse_name"]
-#     days_works = request.form["days_works"]
-#     available_weekends = request.form["available_weekends"]
-#     email = request.form["email"]
-#     new_nurse = Nurse(nurse_name, days_works, available_weekends, email, id)
-#     nurse_repository.update(new_nurse)
-#     return redirect("/nurses")
+# UPDATE
+@prices_blueprint.route("/prices/<id>", methods=["POST"])
+def update_price(id):
+    treatment_type = request.form["treatment_type"]
+    price = request.form["price"]
+    time_req = request.form["time_req"]
+    vet_req = request.form["vet_req"]
+    nurses_req = request.form["nurses_req"]
+    new_price = Price(treatment_type, price, time_req, vet_req, nurses_req, id)
+    price_repository.update(new_price)
+    return redirect("/prices")
 
-# #DELETE
-# @nurses_blueprint.route("/nurses/<id>/delete", methods=["POST"])
-# def delete_nurse(id):
-#     nurse_repository.delete(id)
-#     return redirect("/nurses")
+#DELETE
+@prices_blueprint.route("/prices/<id>/delete", methods=["POST"])
+def delete_price(id):
+    price_repository.delete(id)
+    return redirect("/prices")

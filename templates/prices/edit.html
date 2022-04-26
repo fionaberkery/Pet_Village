@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 id="add-heading"> Edit Details Here </h3>
+
+<form action="/prices/{{price.id}}" method="POST" id="add-box">
+<div id="add-content-box">
+    <label for="treatment_type"> Type </label>
+        <input type="text" id="treatment_type" name="treatment_type" value="{{ price.treatment_type }}" required autofocus> <br>
+
+        <label for="price"> Price  </label>
+        <input type="text" id="price" name="price" value="{{ price.price }}" required autofocus> <br>
+
+        <label for="time_req"> Time Required For Appointment </label>
+        <input type="text" id="time_req" name="time_req" value="{{ price.time_req}}" required autofocus> <br>
+
+        <label for="vet_req"> Vet Required for Treatment </label>
+        <input type="text" id="vet_req" name="vet_req" value="{{ price.vet_req}}" required autofocus> <br>
+
+        <label for="nurses_req"> Number of Nurses Required  </label>
+        <input type="text" id="nurses_req" name="nurses_req" value="{{ price.nurses_req }}" required autofocus> <br>
+
+
+    <div>
+        <input type="submit" id="add-button">
+    </div>
+</div>
+</form>
+
+{% endblock %}

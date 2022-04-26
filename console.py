@@ -16,6 +16,10 @@ import repositories.nurse_repository as nurse_repository
 from models.price import Price
 import repositories.price_repository as price_repository
 
+from models.booking import Booking
+import repositories.booking_repository as booking_repository
+
+
 # treatment_repository.delete_all()
 # pet_repository.delete_all()
 # owner_repository.delete_all()
@@ -91,25 +95,25 @@ price_repository.save(price_4)
 
 
 
-pet_1 = Pet("Snuffles", "1st May 2021", "Hamster", owner_1, vet_1)
+pet_1 = Pet("Snuffles", '2021-12-28', "Hamster", owner_1, vet_1)
 pet_repository.save(pet_1)
-pet_2 = Pet("Fergus", "14th Dec 2022", "Rabbit", owner_2, vet_2)
+pet_2 = Pet("Fergus", '2021-12-28', "Rabbit", owner_2, vet_2)
 pet_repository.save(pet_2)
-pet_3 = Pet("Poppins", "21st June 2015", "Cat", owner_3, vet_4)
+pet_3 = Pet("Poppins", '2021-12-28', "Cat", owner_3, vet_4)
 pet_repository.save(pet_3)
-pet_4 = Pet("Harry", "19th Oct 2013", "Dog", owner_4, vet_5)
+pet_4 = Pet("Harry", '2021-12-28', "Dog", owner_4, vet_5)
 pet_repository.save(pet_4)
-pet_5 = Pet("Archie", "16th Feb 2011", "Dog", owner_5, vet_6)
+pet_5 = Pet("Archie", '2021-12-28', "Dog", owner_5, vet_6)
 pet_repository.save(pet_5)
-pet_6 = Pet("Jake", "9th Aug 2014", "Guinea Pig", owner_6, vet_5)
+pet_6 = Pet("Jake", '2021-12-28', "Guinea Pig", owner_6, vet_5)
 pet_repository.save(pet_6)
-pet_7 = Pet("Sally", "31st Jan 2016", "Snake", owner_7, vet_3)
+pet_7 = Pet("Sally", '2021-12-28', "Snake", owner_7, vet_3)
 pet_repository.save(pet_7)
-pet_8 = Pet("Roxy", "7th July 2018", "Bearded Dragon", owner_8, vet_1)
+pet_8 = Pet("Roxy", '2021-12-28', "Bearded Dragon", owner_8, vet_1)
 pet_repository.save(pet_8)
-pet_9 = Pet("Rupert", "15th May 2020", "Rat", owner_3, vet_4)
+pet_9 = Pet("Rupert", '2021-12-28', "Rat", owner_3, vet_4)
 pet_repository.save(pet_9)
-pet_10 = Pet("Coco", "15th March 2020", "Dog", owner_7, vet_3)
+pet_10 = Pet("Coco", '2021-12-28', "Dog", owner_7, vet_3)
 pet_repository.save(pet_10)
 
 # pet_repository.select_all()
@@ -120,7 +124,7 @@ treatment_1 = Treatment("26th May 2021", "MRI Scan", pet_2, vet_1)
 treatment_repository.save(treatment_1)
 treatment_2 = Treatment("3rd Aug 2021", "CT Scan", pet_3, vet_6)
 treatment_repository.save(treatment_2)
-treatment_3 = Treatment("19th Jan 2021", "US Scan", pet_4, vet_2)
+treatment_3 = Treatment("19th Jan 2021", "Ultra Sound Scan", pet_4, vet_2)
 treatment_repository.save(treatment_3)
 treatment_4 = Treatment("17th Nov 2021", "MRI Scan", pet_7, vet_3)
 treatment_repository.save(treatment_4)
@@ -132,3 +136,16 @@ treatment_repository.save(treatment_5)
 # treatment_repository.select_all()
 # treatment_repository.select(10)
 # treatment_repository.delete(10)
+
+
+booking_1 = Booking('2022-04-23', "12pm", pet_8, treatment_1, vet_1)
+booking_repository.save(booking_1)
+booking_2 = Booking('2022-04-23', "9.15am", pet_4, treatment_2, vet_1)
+booking_repository.save(booking_2)
+booking_3 = Booking('2022-04-23', "11.30am", pet_8, treatment_1, vet_2)
+booking_repository.save(booking_3)
+booking_4 = Booking('2022-04-23', "3pm", pet_2, treatment_3, vet_3)
+booking_repository.save(booking_4)
+booking_5 = Booking('2022-04-23', "1pm", pet_3, treatment_1, vet_4)
+booking_repository.save(booking_5)
+
