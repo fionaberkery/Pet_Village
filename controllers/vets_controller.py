@@ -84,3 +84,8 @@ def bookings(id):
     vet = vet_repository.select(id)
     bookings = booking_repository.find_by_vet(vet)
     return render_template("/vets/bookings.html", bookings=bookings, vet=vet)
+
+
+
+
+

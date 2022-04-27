@@ -85,3 +85,8 @@ def find_by_vet(vet):
         booking = Booking(result['date'], result['time'], pet, price, vet, result['id'])
         bookings.append(booking)
     return bookings 
+
+
+
+
+    
