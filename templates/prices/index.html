@@ -2,24 +2,24 @@
 {% block content %}
 
 <section id="scan-page">
-
+<br> 
 <h3 id="prices-header"> Treatment & Prices </h3>
 
 <form method="get" action="/prices/new">
-    <button id="add-button" type="submit"> Add A New Treatment </button>
+    <button id="add-new-button"  type="submit"> Add A New Treatment </button>
 </form>
 
-
+<br> <br> 
 <div id="grid-container-owners">
 
 {% for price in prices %}
     
     <section id="price-info-box">
-        <h4> {{ price.treatment_type }} </h4>
+        <h4 id="capitals"> {{ price.treatment_type }} </h4>
         <p> 
-            <b> Price </b> : {{ price.price }} </b> <br>
-            <b> Time Required </b> : {{ price.time_req }} </b> <br>
-            <b> Vet Required </b> : 
+            <b> PRICE : </b>  {{ price.price }} </b> <br>
+            <b> TIME REQUIRED : </b>  {{ price.time_req }} </b> <br>
+            <b> VET REQUIRED :</b> 
             
                 {% if price.vet_req == True %}
         
@@ -32,7 +32,7 @@
                 {% endif %}
             <br>
 
-            <b> Number of Nurse Required </b> : {{ price.nurses_req }} </b> 
+            <b> NUMBER OF NURSES REQUIRED : </b>  {{ price.nurses_req }} </b> 
         
         </p>
         <a href="/prices/{{ price.id }}/edit"> Edit Treatment/Price Details </a>
@@ -46,6 +46,9 @@
 {% endfor %}
 
 </div>
+<P> <BR> <BR> <BR> <BR> <BR> <BR> </P>
 </section>
+ 
+
 
 {% endblock %}

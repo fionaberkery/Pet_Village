@@ -3,27 +3,22 @@
 
 <div id="pets-page">
 
-<section class="pets" id="grid-container">
-    
-    
-    <h3> Registered Pets </h3>
+<br> 
 
-    
+<h3> Registered Pets </h3>
 
-    <div>
-        <form method="get" action="/pets/new">
-            <button type="submit" id="add-button"> Register A New Pet </button>
-        </form>
-    </div> 
-    
-    <p id="pets-para"> To 'edit' or 'delete' a pet follow link to full profile </p>
 
-</section>
+<form method="get" action="/pets/new">
+    <button type="submit" id="add-new-button"> Register A New Pet </button>
+</form>
 
-<div id="grid-container2">
+<br> <br>
+
+
+<div id="grid-container-owners">
     {% for pet in pets %}
 
-        <section id="pet">
+        <section id="owner">
             <p> <b> {{ pet.pet_name }} </b> <br> 
                 {{ pet.pet_type}} </p>
             <a href="/pets/{{ pet.id }}"> view {{ pet.pet_name}}'s profile </a>
@@ -39,5 +34,6 @@
 </div>
 
 </div>
+<p> <br><br><br><br><br><br><br><br><br><br><br><br> </p>
 
 {% endblock %}

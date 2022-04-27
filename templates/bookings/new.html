@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 id="add-heading"> Add A New Booking </h3>
+
+<h3 id="add-heading"> Add A New Booking </h3> <br> <br>
 
 <form action="/bookings" method="POST" id="add-box">
 
@@ -43,7 +44,7 @@
                 {{ vet.vet_name }}
             </option>
             {% endfor %}
-        </select> <br>
+        </select> <br> <br>
 
 
 
@@ -55,5 +56,6 @@
     </div>    
 </form>
 
+<p> <br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 {% endblock %}

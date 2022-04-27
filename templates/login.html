@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    
+
+    <title> Pet Village Veterinary Clinic </title>
+</head>
+
+<div class="login-page">
+
+
+
+        <label for="uname" id="logins"><b> Username </b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="add-box" required> <br>
+
+        <label for="psw" id="logins"><b> Password </b></label>
+        <input type="text" placeholder="Enter Password" name="psw"id="login-boxes" required> <br>
+    
+        <form method="get" action="/home" id="login-button">
+            <button type="submit" id="login-button"> Log In </button>
+        </form>
+
+    
+   
+
+        <input type="checkbox" checked="checked" name="remember" id="remember"> Remember me <br>
+    
+
+    <p id="fp">
+        <b> <span class="psw" id="password"> Forgot </b> <a href="#" id="password"> password?</a> </span>
+    </p>
+  
+</div>
+
+
+
+
+

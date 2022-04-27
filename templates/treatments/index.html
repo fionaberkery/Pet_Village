@@ -3,28 +3,28 @@
 
 <section id="treatments-page">
     
-    
+    <br> 
     <h3> All Treatment Notes </h3>
 
     
 
     <div>
         <form method="get" action="/treatments/new">
-            <button type="submit" id="add-button"> Create A New Treatment Note </button>
+            <button type="submit" id="add-new-button" > Create A New Treatment Note </button>
         </form>
     </div> 
-
+<br> <br>
 
 <div id="grid-container2">
 
     {% for treatment in treatments %}
 
-    <section id="pet">
+    <section id="owner">
         <p>
-            <b> Pet </b> : {{ treatment.pet.pet_name}} <br>
-            <b> Vet </b> : {{ treatment.vet.vet_name }} <br>
-            <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
-            <b> Procedure </b> : {{ treatment.procedure_type}} <br>
+            <b> PET : </b>  {{ treatment.pet.pet_name}} <br>
+            <b> VET : </b>  {{ treatment.vet.vet_name }} <br>
+            <b> TREATMENT DATE : </b>  {{ treatment.treatment_date }} <br> 
+            <b> TREATMENT TYPE : </b>  {{ treatment.procedure_type}} <br>
             <a id="report-link" href="/treatments/reports"> See All Related Documents & Reports </a>
             
         
@@ -44,7 +44,7 @@
 
     
 {% endfor %}
-
+<P> <BR> <BR> <BR> <BR> <BR> <BR> </P>
 </div>
 
 
@@ -80,5 +80,5 @@
         
 
 </section>
-
+<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
 {% endblock %}

@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<h3 id="add-heading"> Add a New Nurse to the Clinic </h3>
+<br>
+<h3 id="add-heading"> Add a New Nurse to the Clinic </h3> <br> <br>
 
 <form action="/nurses" method="POST" id="add-box">
     <div id="add-content-box">
@@ -16,12 +16,14 @@
         <input type="text" id="available_weekends" name="available_weekends" placeholder="Availability.."> <br>
 
         <label for="email"> Email </label>
-        <input type="text" id="email" name="email" placeholder="Work email.."> <br>
+        <input type="text" id="email" name="email" placeholder="Work email.."> <br> <br>
 
         <input type="submit" id="add-button">
 
     </div>
 </form>
+
+<p> <br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 id="add-heading"> Edit Nurse Details Here </h3>
+<h3 id="add-heading"> Edit Nurse Details Here </h3> <br>
 
 <form action="/nurses/{{ nurse.id }}" method="POST" id="add-box">
 <div id="add-content-box">
@@ -15,7 +15,7 @@
         <input type="text" id="available_weekends" name="available_weekends" value="{{ nurse.available_weekends }}" required autofocus> <br>
 
         <label for="email"> Email  </label>
-        <input type="text" id="email" name="email" value="{{ nurse.email }}" required autofocus> <br>
+        <input type="text" id="email" name="email" value="{{ nurse.email }}" required autofocus> <br> <br>
 
 
     <div>
@@ -23,5 +23,5 @@
     </div>
 </div>
 </form>
-
+<p><br><br><br><br><br><br><br><br></p>
 {% endblock %}

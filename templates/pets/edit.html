@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 id="add-heading"> Edit or Update Pet Here </h3>
+<h3 id="add-heading"> Edit or Update Pet Here </h3> <br>
 
 <form action="/pets/{{ pet.id }}" method="POST" id="add-box">
 
@@ -35,7 +35,7 @@
                     {{ vet.vet_name }}
                 </option>
                 {% endfor %}
-        </select>    
+        </select>    <br> <br>
     
     
     <div>
@@ -43,5 +43,5 @@
     </div>
 </div>
 </form>
-
+<p><br><br><br><br><br><br><br><br></p>
 {% endblock %}

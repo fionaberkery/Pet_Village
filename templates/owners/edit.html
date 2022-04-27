@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 id="add-heading"> Edit Owner Details Here </h3>
+<h3 id="add-heading"> Edit Owner Details Here </h3> <br>
 
 <form action="/owners/{{ owner.id }}" method="POST" id="add-box">
 <div id="add-content-box">
@@ -15,7 +15,7 @@
         <input type="text" id="email" name="email" value="{{ owner.email }}" required autofocus> <br>
 
         <label for="mobile"> Contact Number : </label>
-        <input type="text" id="mobile" name="mobile" value="{{ owner.mobile }}" required autofocus> <br>
+        <input type="text" id="mobile" name="mobile" value="{{ owner.mobile }}" required autofocus> <br> <br>
 
 
     <div>
@@ -23,5 +23,6 @@
     </div>
 </div>
 </form>
+<p><br><br><br><br><br><br><br><br></p>
 
 {% endblock %}

@@ -4,7 +4,7 @@
 <div id="bookings-page">
 
 <section class="pets" id="grid-container">
-    
+    <br> 
     
     <h3> Bookings </h3>
 
@@ -12,10 +12,10 @@
 
     <div>
         <form method="get" action="/bookings/new">
-            <button type="submit" id="add-button"> Add A New Booking </button>
+            <button type="submit" id="add-new-button"> Add A New Booking </button>
         </form>
     </div> 
-    
+    <br> <br>
 
 
 </section>
@@ -23,7 +23,7 @@
 <div id="grid-container2">
     {% for booking in bookings %}
 
-        <section id="pet">
+        <section id="owner">
             <p> <b> Date </b> : {{ booking.date }} <br> 
                 <b> Time </b> : {{ booking.time }}  <br> 
                 <b> Pet </b>: {{ booking.pet.pet_name }} <br> 
@@ -46,7 +46,6 @@
     {% endfor %}
 
 </div>
-
+<p> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
 {% endblock %}
 
-</div>

@@ -20,7 +20,7 @@
 
 .main-nav a {
     margin: 10px;
-    border-radius: 30px;
+    border-radius: 20px;
     background: #c6fad2;
     color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -33,77 +33,24 @@
     background: #DD9BCF;
 }
 
-h3 {
-    margin: 10px;
-    border-radius: 20px;
-    background: #fad2cc;
-    color: black;
-    display: block;
-    padding: 20px;
-    text-decoration: none;
+
+#parallax {
+    background-image: url(pup.jpg);
+    min-height: 800px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width:70%;
-}
-
-#add-button {
-    
-    background-color: #DD9BCF; 
-    border: none;
-    margin: 10px;
-    margin-left: 20px;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 20px;
-    transition-duration: 0.4s;
-    cursor:pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#add-button {
-    background-color: white;
-    color:black;
-    border:2px solid #DD9BCF;
-}
-
-#add-button:hover {
     background-color: #DD9BCF;
-    color:white;
+    padding: 1%;
 }
 
-#pet {
-    color: black;
-    padding: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    outline-style: solid;
-    outline-color: black;
-    margin: 10px;
-    border-radius: 10px;
-    margin-left: 20px;
 
-}
 
-#grid-container2 {
-    display: grid;
-    grid-template-areas: 
-    'section section section section';
-}
-
-a {
-    color: #DD9BCF;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#pets-para {
-    color:black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* padding: 20px; */
-    margin-left: 20px;
-
-}
 
 #owner {
     color: black;
@@ -114,18 +61,7 @@ a {
     margin: 10px;
     border-radius: 10px;
     margin-left: 20px;
-}
-
-#grid-container-owners {
-    display: grid;
-    grid-template-areas: 
-    'section section section';
-}
-
-#grid-container-vets {
-    display: grid;
-    grid-template-areas: 
-    'section section';
+    overflow: auto;
 }
 
 #vet {
@@ -139,196 +75,22 @@ a {
     margin-left: 20px;
 }
 
-#del-buttons {
-    background-color: #DD9BCF; 
-    border: none;
-    margin: 10px;
-    margin-left: 20px;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 20px;
-    transition-duration: 0.4s;
-    cursor:pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
-    width:20%;
-}
-    
-#del-buttons {
-    background-color: white;
-    color:black;
-    border:2px solid #DD9BCF;
-
-}
-    
-#del-buttons:hover {
-    background-color: #DD9BCF;
-    color:white;
-}
-
-
-#edit-links:link, #edit-links:visited {
-    background-color: #fad2cc;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 10px;
-    width:15%;
-    margin-left: 20px;
-}
-
-
-#edit-links:hover, #edit-links:active {
-    background-color: #DD9BCF;
-}
-
 #details {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left:20px;
     padding: 10px;
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-
-
-
-
-#add-content-box {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 50%;
-}
-
-#add-box {
-    display: flex;
-    justify-content: center;
-}
-
-#add-heading {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-#treatments-link {
-    display: flex;
-    justify-content: flex-end;
-}
-
 #extra-list {
     list-style: none;
 }
-
-h4 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width:40%;
-}
-
-
 
 #p1 {
     width:20%;
 }
 
-
-#parallax {
-    background-image: url(pup.jpg);
-    min-height: 800px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#grid-container4 {
-    display: grid;
-    grid-template-areas: 
-    'section section section';
-}
-
 #home-page {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#treatment-buttons {
-    display: grid;
-    grid-template-areas: 
-    'a form';
-}
-
-#treat-edit-buttons {
-    
-    background-color: #DD9BCF; 
-    border: none;
-    color: black;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 20px;
-    transition-duration: 0.4s;
-    cursor:pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
-}
-
-#treat-edit-buttons {
-    background-color: #fad2cc;
-    color:black;
-    border:2px solid #fad2cc ;
-}
-
-#treat-edit-buttons:hover {
-    background-color: #DD9BCF;
-    border: #DD9BCF;
-    color:white;
-}
-
-#treat-del-buttons {
-    background-color: #DD9BCF; 
-    border: none;
-    margin: 10px;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 20px;
-    transition-duration: 0.4s;
-    cursor:pointer;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
-    
-}
-    
-#treat-del-buttons {
-    background-color: white;
-    color:black;
-    border:2px solid #d70404 ;
-
-}
-    
-#treat-del-buttons:hover {
-    background-color: #d70404;
-    color:white;
-}
-
-#report-link {
-    font-size: smaller;
 }
 
 #scan-page {
@@ -339,54 +101,29 @@ h4 {
     background-size: cover;
 }
 
-#prices-header {
-    margin: 10px;
-    border-radius: 20px;
-    background: #c6fad2;
-    color: black;
-    display: block;
-    padding: 20px;
-    text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    justify-content: center;
-}
-
-#price-info-box {
-    color: black;
-    padding: 30px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    outline-style: solid;
-    outline-color: black;
-    margin: 10px;
-    border-radius: 10px;
-    margin-left: 20px;
-    background-color: #e3fce9;
-}
-
-#bookings-page {
+/* #bookings-page {
     background-image: url(clinic.jpg);
     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
-#pets-page {
+/* #pets-page {
     background-image: url(guinea-pigs.jpg);
     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
-#nurses-page {
+/* #nurses-page {
     background-image: url(hamster.jpg);
     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 #home-page2 {
     background-image: url(hamster.jpg);
@@ -396,8 +133,42 @@ h4 {
     background-size: cover;
 }
 
-footer {
+#log-out {
+    margin: 10px;
+    border-radius: 10px;
+    background: #fad2cc;
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #DD9BCF;
-    padding: 1%;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.login-page {
+    background-image: url(guinea-pigs.jpg);
+    background-size: cover;
+    padding:20%;
+    color:white;
+    
+}    
+
+
+#logins {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#fp {
+    display: flex;
+    justify-content: center;
+    margin-left:100px;
+    color:black;
+}
+
+/* #booking {
+    overflow: auto;
+} */
+
+#add-content-pages {
+    background-image: url(paws.png);
+    
 }

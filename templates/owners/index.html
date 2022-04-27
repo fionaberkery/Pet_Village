@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
+<br>
 <h3> Owners </h3>
 
 <form method="get" action="/owners/new">
-    <button id="add-button" type="submit"> Register A New Owner </button>
+    <button id="add-new-button" type="submit"> Register A New Owner </button>
 </form>
 
+
+<br> <br>
 <div id="grid-container-owners">
 
 {% for owner in owners %}
@@ -19,5 +22,5 @@
 {% endfor %}
 
 </div>
-
+<p> <br> <br><br><br><br><br><br> </p>
 {% endblock %}

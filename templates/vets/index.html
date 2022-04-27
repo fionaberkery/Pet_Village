@@ -1,28 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
-
+<br>
 <h3> Vets </h3>
 
 <form method="get" action="/vets/new">
-    <button id="add-button" type="submit"> Register A New Vet </button>
-</form>
+    <button id="add-new-button"  type="submit"> Register A New Vet </button>
+</form> <br> <br>
 
 <div id="grid-container-vets">
 
 {% for vet in vets %}
 
-    <section id="vet">
-        <p> {{ vet.vet_name }} <br>
+    <section id="owner">
+        <p> <b> {{ vet.vet_name }} </b> <br>
         <a href="vets/{{ vet.id }}"> view full profile </a> </p> 
-        <a href="/vets/{{ vet.id }}/pets"> view all {{ vet.vet_name }}'s pets </a> <br> <br>
+       
+
+        <form method="get" action="/vets/{{ vet.id }}/bookings">
+            <button type="submit" id="treat-edit-buttons"> {{ vet.vet_name}}'s Appointments </button>
+        </form>
+
+        <form method="get" action="/vets/{{ vet.id }}/pets">
+            <button type="submit" id="treat-edit-buttons"> {{ vet.vet_name}}'s Pets </button>
+        </form>
         
         <form method="get" action="/vets/{{ vet.id }}/treatments">
         <button type="submit" id="treat-edit-buttons" > {{ vet.vet_name}}'s Treatment Notes </button>
         </form>
 
-        <form method="get" action="/vets/{{ vet.id }}/bookings">
-        <button type="submit" id="treat-edit-buttons"> {{ vet.vet_name}}'s Appointments </button>
-        </form>
+        
 
        
 
@@ -32,4 +38,5 @@
 
 </div>
 
+<p> <br> <br><br><br><br><br><br> </p>
 {% endblock %}

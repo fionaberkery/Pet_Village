@@ -5,20 +5,21 @@
 
     
 
-    <p id="details"> Name : {{ pet.pet_name }} <br>
-        Type : {{ pet.pet_type }} <br>
-        D.O.B : {{ pet.dob }} <br>
-        Vet : {{ pet.vet.vet_name }} <br>
-        Owner : {{ pet.owner.first_name }} {{ pet.owner.last_name }} 
+    <p id="details"> 
+        <b> NAME : </b> {{ pet.pet_name }} <br>
+        <B> TYPE : </B> {{ pet.pet_type }} <br>
+        <B> DATE OF BIRTH : </B>{{ pet.dob }} <br>
+        <B> VET : </B> {{ pet.vet.vet_name }} <br>
+        <B> OWNER :</B> {{ pet.owner.first_name }} {{ pet.owner.last_name }} 
             <a href="/owners/{{ pet.owner.id }}"> view {{ pet.owner.first_name }}'s full details </a> <br> <br>
         
 
       
 
-        Appointments :
-        <a href="/pets/{{ pet.id }}/bookings"> view all {{ pet.pet_name}}'s appointments </a> <br>
-        Treatment Notes :
-        <a href="/pets/{{ pet.id }}/treatments"> view all {{ pet.pet_name}}'s notes </a> <br>
+        <B> APPOINTMENTS : </B>
+        <a href="/pets/{{ pet.id }}/bookings"> view all </a> <br>
+        <B> TREATMENT NOTES : </B>
+        <a href="/pets/{{ pet.id }}/treatments"> view all </a> <br>
 
 
         <section>
@@ -34,6 +35,6 @@
 
 
     
-
+    <P> <BR> <BR> <BR> <BR> <BR> <BR> </P>
 
 {% endblock %}

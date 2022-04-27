@@ -1,0 +1,25 @@
+#grid-container2 {
+    display: grid;
+    grid-template-areas: 
+    'section section';
+    overflow: auto;
+}
+
+#grid-container-owners {
+    display: grid;
+    grid-template-areas: 
+    'section section section';
+}
+
+#grid-container-vets {
+    display: grid;
+    grid-template-areas: 
+    'section section section';
+}
+
+
+#grid-container4 {
+    display: grid;
+    grid-template-areas: 
+    'section section section';
+}

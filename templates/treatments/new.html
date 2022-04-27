@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 id="add-heading"> Add A New Treatment Note </h3>
+
+
+<h3 id="add-heading"> Add A New Treatment Note </h3> <br> <br>
 
 <form action="/treatments" method="POST" id="add-box">
 
@@ -33,20 +35,24 @@
         <input type="text" id="treatment_date" name="treatment_date" placeholder="Date.." required> <br>
 
         <label for="procedure_type"> Procedure </label>
-        <input type="text" id="procedure_type" name="procedure_type" placeholder="Procedure.." required> <br>
+        <input type="text" id="procedure_type" name="procedure_type" placeholder="Procedure.." required> <br> <br>
 
        
 
 
 
-        <input id="add-button" type="submit">
+        <input id="add-button" type="submit"> <br> <br>
 
     
      
 
 
     </div>    
+
+
+
 </form>
 
+<p> <br><br><br><br><br><br><br><br><br><br><br><br></p>
 
 {% endblock %}

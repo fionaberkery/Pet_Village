@@ -1,0 +1,31 @@
+#edit-links:link, #edit-links:visited {
+    background-color: #fad2cc;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    width:15%;
+    margin-left: 20px;
+}
+
+
+#edit-links:hover, #edit-links:active {
+    background-color: #DD9BCF;
+}
+
+#treatments-link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+a {
+    color: #DD9BCF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#report-link {
+    font-size: smaller;
+}

@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section id="add-content-pages">
 
-<h3 id="add-heading"> Add a New Treatment to the Clinic </h3>
+<h3 id="add-heading"> Add a New Treatment to the Clinic </h3> <br> <br>
 
 <form action="/prices" method="POST" id="add-box">
     <div id="add-content-box">
@@ -19,12 +20,14 @@
         <input type="text" id="vet_req" name="vet_req" placeholder="Vet Required?.."> <br>
 
         <label for="nurses_req"> Nurses Required for Treatment </label>
-        <input type="text" id="nurses_req" name="nurses_req" placeholder="Number needed.."> <br>
+        <input type="text" id="nurses_req" name="nurses_req" placeholder="Number needed.."> <br> <br>
 
         <input type="submit" id="add-button">
 
     </div>
 </form>
 
+<p> <br><br><br><br><br><br><br><br><br><br><br><br></p>
 
+</section>
 {% endblock %}

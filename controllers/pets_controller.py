@@ -11,11 +11,19 @@ import repositories.booking_repository as booking_repository
 
 pets_blueprint = Blueprint("pets",__name__)
 
-# INDEX
+
+#LOG IN PAGE
+@pets_blueprint.route('/home')
+def login():
+    return render_template('index.html')
+
+# HOME PAGE
 @pets_blueprint.route('/pets')
 def pets():
     pets = pet_repository.select_all()
     return render_template('pets/index.html', pets=pets)
+
+
 
 # SHOW
 @pets_blueprint.route('/pets/<id>')
