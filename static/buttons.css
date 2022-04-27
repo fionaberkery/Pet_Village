@@ -43,7 +43,7 @@
     transition-duration: 0.4s;
     cursor:pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',Geneva, Verdana, sans-serif;
-    width:20%;
+    width:auto;
 }
     
 #del-buttons {

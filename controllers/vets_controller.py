@@ -67,6 +67,7 @@ def update_vet(id):
 @vets_blueprint.route("/vets/<id>/pets")
 def get_pets(id):
     vet = vet_repository.select(id)
+    pets = pet_repository.select_all()
     pets = pet_repository.find_by_vet(vet)
     return render_template("/vets/pets.html", pets=pets, vet=vet)
 

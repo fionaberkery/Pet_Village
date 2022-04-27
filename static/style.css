@@ -155,13 +155,14 @@ footer {
 
 #logins {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: fit-content;
 }
 
 #fp {
     display: flex;
     justify-content: center;
     margin-left:100px;
-    color:black;
+    color:white;
 }
 
 /* #booking {
@@ -171,4 +172,25 @@ footer {
 #add-content-pages {
     background-image: url(paws.png);
     
+}
+
+#login-header {
+    display: flex;
+    justify-content: center;
+    margin-left: 17%;
+    color:#DD9BCF;
+    background-color: white;
+    width:fit-content;
+    border-radius: 10px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;  
+   
+  }
+
+#table {
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

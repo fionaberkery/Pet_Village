@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='links.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='headings.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='grids.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='boxes.css') }}">
     
     
 
@@ -12,11 +17,11 @@
 </head>
 
 <div class="login-page">
-
+    <h1 id="login-header"> Pet Village Veterinary Clinic </h1> 
 
 
         <label for="uname" id="logins"><b> Username </b></label>
-        <input type="text" placeholder="Enter Username" name="uname" id="add-box" required> <br>
+        <input type="text" placeholder="Enter Username" name="uname" id="login-boxes" required> <br>
 
         <label for="psw" id="logins"><b> Password </b></label>
         <input type="text" placeholder="Enter Password" name="psw"id="login-boxes" required> <br>

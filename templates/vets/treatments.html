@@ -4,10 +4,11 @@
 {% for treatment in treatments %}
 
         <section>
-            <p> <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
+            <p> 
+                <b> Pet </b> : {{ treatment.pet.pet_name}}  <br>
                 <b> Procedure </b> : {{ treatment.procedure_type}} <br>
-                <b> Pet </b> : {{ treatment.pet.pet_name}} <br>
-                <b> Vet </b> : {{ treatment.vet.vet_name }} <br>
+                
+                <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
                 <a href="/treatments/reports"> See All Related Documents & Reports </a>
                 
             

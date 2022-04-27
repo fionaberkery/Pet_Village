@@ -3,7 +3,31 @@
 
 <h3> Booked Appointments </h3>
 
+<br>
+
+<table>
+    <tr id="table">
+        <th> Date </th>
+        <th> Time </th>
+        <th> Treatment </th>
+        <th> Pet </th>
+    </tr>
+</table>
+
 {% for booking in bookings %}
+
+<table>
+    <tr>
+        <th> {{ booking.date }} </th>
+        <th> {{ booking.time }} </th>
+        <th> {{ booking.price.treatment_type }} </th>
+        <th> {{ booking.pet.pet_name }} </th>
+    </tr>
+</table>
+
+        {% endfor %}
+
+<!-- {% for booking in bookings %}
 
 
 
@@ -15,7 +39,8 @@
                 
             </p>
         </section>
-    {% endfor %} 
+    {% endfor %}  -->
+<p> <br> <br><br><br><br></p>
 
 
 {% endblock %}
