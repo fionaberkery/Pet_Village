@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-
+<br> 
 {% for pet in pets %}
 
         <section>
-            <p> <b> Pet Name </b> : {{ pet.pet_name }} <br> 
-                <b> Date of Birth </b> : {{ pet.dob}} <br>
-                <b> Type of Pet </b> : {{ pet.pet_type}} <br>
-                <b> Owner </b> : {{ pet.owner.first_name }} {{ pet.owner.last_name }}
+            <p> <b> PET : </b>  {{ pet.pet_name }} <br> 
+                <b> D.O.B : </b>  {{ pet.dob}} <br>
+                <b> TYPE : </b> {{ pet.pet_type}} <br>
+                <b> OWNER : </b>  {{ pet.owner.first_name }} {{ pet.owner.last_name }}
             
             </p>
             
@@ -18,5 +18,7 @@
 
 
         {% endfor %}
+
+        <br><br><br><br>
 
 {% endblock %}

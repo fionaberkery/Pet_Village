@@ -1,35 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for treatment in treatments %}
 
-        <section>
-            <p> 
-                <b> Pet </b> : {{ treatment.pet.pet_name}}  <br>
-                <b> Procedure </b> : {{ treatment.procedure_type}} <br>
-                
-                <b> Treatment Date </b> : {{ treatment.treatment_date }} <br> 
-                <a href="/treatments/reports"> See All Related Documents & Reports </a>
-                
+<div id="gridy">
+
+    {% for treatment in treatments %}
+
+    <section id="owner">
+        <p>
+            <b> PET : </b>  {{ treatment.pet.pet_name}} <br>
             
-            </p>
+            <b> TREATMENT DATE : </b>  {{ treatment.treatment_date }} <br> 
+            <b> TREATMENT TYPE : </b>  {{ treatment.procedure_type}} <br>
+            <a id="report-link" href="/treatments/reports"> See All Related Documents & Reports </a>
             
         
-            
-
-        </section>
-
-        <section>
-            <a href="/treatments/{{ treatment.id }}/edit" id="edit-links"> Edit </a>
+        </p>
+        
+        <div id="treatment-buttons">
+            <a href="/treatments/{{ treatment.id }}/edit" id="treat-edit-buttons"> Edit </a>
     
             <form action="/treatments/{{ treatment.id }}/delete" method="POST">
-                <input type="submit" value="Delete" id="del-buttons">
+                <input type="submit" value="Delete" id="treat-del-buttons">
             </form>
-            </section>
+        </div>
         
-    {% endfor %}
+
+    </section>
 
 
+</div>
+{% endfor %}
 
-
+    <BR> <br> <br> <br> <br><br> <br><br> <br><br> <br>
+ 
 {% endblock %}

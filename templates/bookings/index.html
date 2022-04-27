@@ -10,42 +10,41 @@
 
     
 
-    <div>
-        <form method="get" action="/bookings/new">
-            <button type="submit" id="add-new-button"> Add A New Booking </button>
-        </form>
-    </div> 
+  
     <br> <br>
 
 
-</section>
 
-<div id="grid-container2">
+    <table>
+        <tr id="table">
+            <th> Date </th>
+            <th> Time </th>
+            <th> Treatment </th>
+            <th> Pet </th>
+        </tr>
+    </table>
+    
+<br><br>
+
     {% for booking in bookings %}
-
-        <section id="owner">
-            <p> <b> Date </b> : {{ booking.date }} <br> 
-                <b> Time </b> : {{ booking.time }}  <br> 
-                <b> Pet </b>: {{ booking.pet.pet_name }} <br> 
-                <b> Treatment </b> : {{ booking.price.treatment_type }} <br> 
-                <b> Vet </b> : {{ booking.vet.vet_name }} <br>
-            </p>
-
-            <a href="/bookings/{{ booking.id }}/edit"> Edit </a>
-          
-            <form action="/bookings/{{ booking.id }}/delete" method="POST">
-                <input type="submit" value="Delete">
-            </form>
-        
-            
-
-        </section>
-
-
-        
-    {% endfor %}
-
-</div>
+    
+    <table>
+        <tr>
+            <th> {{ booking.date }} </th>
+            <th> {{ booking.time }} </th>
+            <th> {{ booking.price.treatment_type }} </th>
+            <th> {{ booking.pet.pet_name }} </th>
+        </tr>
+    </table>
+    
+    
+            {% endfor %}
+            <br> <br> <br> <br> <br>
+            <div>
+                <form method="get" action="/bookings/new">
+                    <button type="submit" id="add-new-book-button"> Add A New Booking </button>
+                </form>
+            </div> 
 <p> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
 {% endblock %}
 

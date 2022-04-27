@@ -177,11 +177,11 @@ footer {
 #login-header {
     display: flex;
     justify-content: center;
-    margin-left: 17%;
-    color:#DD9BCF;
-    background-color: white;
-    width:fit-content;
-    border-radius: 10px;
+    padding:10px;
+    color:black;
+    background-color: #DD9BCF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
 }
 
 table {
@@ -193,4 +193,12 @@ table {
 #table {
     text-transform: uppercase;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#gridy {
+    width:fit-content;
+    display: grid;
+    grid-template-areas: 
+    'section'
+    'div div';
 }
