@@ -21,6 +21,7 @@
             <th> Time </th>
             <th> Treatment </th>
             <th> Pet </th>
+            <th> Vet </th>
         </tr>
     </table>
     
@@ -34,11 +35,17 @@
             <th> {{ booking.time }} </th>
             <th> {{ booking.price.treatment_type }} </th>
             <th> {{ booking.pet.pet_name }} </th>
+            <th> {{ booking.vet.vet_name }} </th>
         </tr>
     </table>
     
     
             {% endfor %}
+
+
+
+
+            
             <br> <br> <br> <br> <br>
             <div>
                 <form method="get" action="/bookings/new">
