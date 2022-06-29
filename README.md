@@ -8,7 +8,7 @@ and allows the user to book appointments for pets and assing Vets and nurses to 
 #### Note: This setup tutorial assumes that you already have the version control system <a href="https://git-scm.com/">git</a>.
 
 In your local machine terminal:
-- git clone https://github.com/fioaberkery/Pet_Village.git
+- git clone https://github.com/fionaberkery/Pet_Village.git
 - createdb pet_village.sql (create db)
 - psql -d pet_village -f db/pet_village.sql (reset tables)
 - python3 console.py (insert sql dummy data)
