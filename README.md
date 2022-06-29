@@ -5,6 +5,7 @@ and allows the user to book appointments for pets and assing Vets and nurses to 
 
 ## Set Up
 
-#### Note: This setup tutorial assumes that you already have the version control system git.
+#### Note: This setup tutorial assumes that you already have the version control system <a href="https://git-scm.com/">git</a>.
+
 
 
