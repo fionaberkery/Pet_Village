@@ -3,7 +3,12 @@
 A web app for the administrative management and running of a Veterinary clinic. The app registers and tracks animals
 and allows the user to book appointments for pets and assing Vets and nurses to these appointments. 
 
+<br> </br>
+<section style="display: flex; flex-direction: row" align="center" gap="30px" >
+  
   <img width="600" height = "280" alt="virtualPet" src="https://user-images.githubusercontent.com/101260084/176439563-81fc76f9-bcec-4304-a709-3a0b7891f6eb.gif"/>
+  
+  </section>
 
 ## Set Up
 
