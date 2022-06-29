@@ -9,7 +9,7 @@ and allows the user to book appointments for pets and assing Vets and nurses to 
 ```
 In your local machine terminal:
 - git clone https://github.com/fionaberkery/Pet_Village.git
-- createdb pet_village.sql (create db)
+- createdb pet_village (create db)
 - psql -d pet_village -f db/pet_village.sql (reset tables)
 - python3 console.py (insert sql dummy data)
 - flask run
