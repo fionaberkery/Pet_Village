@@ -30,7 +30,7 @@ In your local machine terminal:
 
 ### Tools:
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-<img width="100" height = "35" alt="parallax" src="https://user-images.githubusercontent.com/101260084/176436224-1232d3ed-6408-446b-af7f-3d3b20d03937.png"/>
+<img width="120" height = "30" alt="parallax" src="https://user-images.githubusercontent.com/101260084/176436224-1232d3ed-6408-446b-af7f-3d3b20d03937.png"/>
 
 ### Developed by:
 <div style="margin-top: 5vh">
